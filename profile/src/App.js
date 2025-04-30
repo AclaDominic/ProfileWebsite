@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Education from './components/Education';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -53,6 +54,7 @@ function App() {
             <ul className="list-unstyled">
               <li><Link className="nav-link" to="/">Home</Link></li>
               <li><Link className="nav-link" to="/about">About Me</Link></li>
+              <li><Link className="nav-link" to="/education">Education</Link></li>
               <li><Link className="nav-link" to="/projects">Projects</Link></li>
               <li><Link className="nav-link" to="/contact">Contact</Link></li>
             </ul>
@@ -63,6 +65,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/education" element={<Education />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
