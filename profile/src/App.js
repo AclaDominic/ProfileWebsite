@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -8,6 +8,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Bootstrap triggers events when the sidebar opens or closes
+    const sidebarElement = document.getElementById('sidebar');
+    sidebarElement.addEventListener('shown.bs.offcanvas', () => setIsSidebarOpen(true));
+    sidebarElement.addEventListener('hidden.bs.offcanvas', () => setIsSidebarOpen(false));
+
+    return () => {
+      sidebarElement.removeEventListener('shown.bs.offcanvas', () => setIsSidebarOpen(true));
+      sidebarElement.removeEventListener('hidden.bs.offcanvas', () => setIsSidebarOpen(false));
+    };
+  }, []);
+
   return (
     <Router>
       <div className="app" style={appStyle}>
@@ -45,7 +59,7 @@ function App() {
           </div>
         </div>
 
-        <div style={contentStyle}>
+        <div style={{ ...contentStyle, marginLeft: isSidebarOpen ? '250px' : '1rem' }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -65,7 +79,7 @@ const appStyle = {
 };
 
 const contentStyle = {
-  marginLeft: '1rem',
+  transition: 'margin-left 0.3s ease',
 };
 
 export default App;
