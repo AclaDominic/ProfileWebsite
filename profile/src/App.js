@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="app" style={appStyle}>
-        {/* Sidebar Trigger Icon */}
         <i
           className="bi bi-list fs-3 text-primary"
           type="button"
@@ -21,7 +20,6 @@ function App() {
           style={{ cursor: 'pointer', marginBottom: '1rem' }}
         ></i>
 
-        {/* Sidebar */}
         <div
           className="offcanvas offcanvas-start"
           tabIndex="-1"
@@ -29,7 +27,7 @@ function App() {
           aria-labelledby="sidebarLabel"
         >
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="sidebarLabel">Menu</h5>
+            <h5 className="offcanvas-title" id="sidebarLabel">Navigation</h5>
             <button
               type="button"
               className="btn-close"
@@ -47,7 +45,6 @@ function App() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div style={contentStyle}>
           <Routes>
             <Route path="/" element={<Home />} />

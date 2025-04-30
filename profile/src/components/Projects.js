@@ -6,9 +6,13 @@ const Skills = () => {
     <div style={cardStyle}>
       <h1>Projects</h1>
       <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
+        <li>Project Management System (PMS)</li>
+        <p>Project management system used to track projects and the task within the projects</p>
+        <p><strong>Technologies used:</strong> React.js, Laravel, MySQL</p>
+        <li>E-commerce (Website)</li>
+        <p>E-commerce website for selling products online</p>
+        <p><strong>Technologies used:</strong> React.js, Laravel, MySQL</p>
+        
       </ul>
     </div>
   );
