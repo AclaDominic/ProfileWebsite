@@ -20,6 +20,8 @@ const Education = () => {
         <p>Pulo National High School</p>
         <li>Senior High School</li>
         <p>Cabuyao Institute of Technology</p>
+        <li>College (Current)</li>
+        <p>Pamantasan ng Cabuayo (3rd year BSIT)</p>
       </ul>
     </div>
   );
