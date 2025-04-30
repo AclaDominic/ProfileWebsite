@@ -38,7 +38,7 @@ function App() {
           <div className="offcanvas-body">
             <ul className="list-unstyled">
               <li><Link className="nav-link" to="/">Home</Link></li>
-              <li><Link className="nav-link" to="/about">About</Link></li>
+              <li><Link className="nav-link" to="/about">About Me</Link></li>
               <li><Link className="nav-link" to="/projects">Projects</Link></li>
               <li><Link className="nav-link" to="/contact">Contact</Link></li>
             </ul>
