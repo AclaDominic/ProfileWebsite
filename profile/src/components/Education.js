@@ -15,8 +15,11 @@ const Education = () => {
       <h1>Education</h1>
       <ul>
         <li>Elementary</li>
+        <p>San Isidro Elementary School</p>
         <li>High School</li>
+        <p>Pulo National High School</p>
         <li>Senior High School</li>
+        <p>Cabuyao Institute of Technology</p>
       </ul>
     </div>
   );
